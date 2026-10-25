@@ -124,7 +124,8 @@ select * from Projects;
 1. Department Salary Summary
 Show department name, employee count, average, minimum and maximum salary. Include departments with no employees.  */
 
-select  d.dept_name , count(*) as emp_count, avg(e.salary) as avg_salary, min(e.salary) as min_salary, max(e.salary) as max_salary from departments d join employees e on d.dept_id=e.dept_id group by dept_name ;
+select  d.dept_name , count(*) as emp_count, avg(e.salary) as avg_salary, min(e.salary) as min_salary, max(e.salary) as max_salary
+	from departments d join employees e on d.dept_id=e.dept_id group by dept_name ;
 
 /*
 2. Second Highest Salary per Department
